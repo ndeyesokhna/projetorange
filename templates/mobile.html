@@ -40,24 +40,32 @@
                  </div>
              </div>
              <div class="div1">
-                 <div class="input-group input-group-lg">
-                 <span class="input-group-text" id="inputGroup-sizing-lg">Periode</span>
-                 <input type="text" class="form-control" placeholder="mois-année" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                 </div>  
-         
-                 <div class="input-group input-group-lg">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">Periode</span>
-                    <input type="text" class="form-control" placeholder="mois-année" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                    </div> 
-             </div>
-             <div>
+                <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Mois</span>
+                <select name="month" id="month">
+                    {% for month in tab_months %}
+                        <option value={{month}} >{{month}}</option>
+                    {% endfor %}
+                </select>
+    
+                </div>  
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Année</span>
+                    <select name="year" id="year">
+                        {% for year in tab_years %}
+                            <option value={{year}} >{{year}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            
              <div class="envoyer">
                  <a href="/" class="button5" > Retour</a>
                  <button class="button6" type="submit">Envoyer</button>
              </div>    
      
                  
-             </div>
+            
      
      
              </div>  

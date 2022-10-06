@@ -1,63 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/********************* Header ********************/
+
 .header1{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}              
+    padding: 10px 30px;
+}
+
 .imgorange{
-    border: 2px solid  hwb(21 0% 0% / 0.854);
-    width: 13%;
+    width: 14%;
 }
 
-
-
-                     /* body */
-h1{
-    display: flex;
-    justify-content: center;
-    
-}
 .divh1{
     background-color: hwb(21 0% 0% / 0.854);
-    padding-bottom: 20px;
-    padding-top: 10px;
-  
+    padding: 30px 0;
+    margin: 20px 0;
 }
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 1px;
+}
+
+
+/* ************ Fin Header ************ */
+
+
+
+
 .form1{
     border:  hwb(21 0% 0% / 0.854) solid 2px;
     height: 50vh;
     display: flex;
     flex-direction: column;
-    font-size: xx-large;
-    background-color: rgb(233, 233, 248);
     padding: 0 15%;
 }
+
+.form1 h4{
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 40px 0 20px 0;
+}
+
 .form-check{
-    min-width: 20vw ;
+    margin: 10px 0;
+}
 
+.form-check label{
+    font-size: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
-.form-check:first-child{
-    margin-bottom: 20px;
 
+.form-check input[type="radio"]{
+    cursor: pointer;
 }
-.divfooter{
-    border: solid 2px hwb(21 0% 0% / 0.854);
-    padding: 30px;
-    text-align: end;
-}
-.imgfooter{
-    width: 02%;
-    padding-top:10px ;
 
-}
-.imgfooter:nth-child(2){
-    margin-left: 10px;
-    margin-right: 10px;
-    
-}
 .suivant{
     display: flex;
-    justify-content: end;
-    width: 66vw;    
+    justify-content: flex-end; 
+    margin-top: 20px;
 }
 
+.button6{
+    background: hwb(21 0% 0% / 0.854);
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+/* ***************** Footer Section *************** */
+.divfooter{
+    border: solid 2px hwb(21 0% 0% / 0.854);
+    padding: 20px 40px;
+    text-align: end;
+}
+
+.imgfooter{
+    width: 60px;
+    padding-top:10px ;
+    cursor: pointer;
+}
+
+.imgfooter:nth-child(2){
+    margin: 0 10px;
+}
+/* *************** Fin footer section **************** */
