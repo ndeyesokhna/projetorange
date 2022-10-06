@@ -1,0 +1,87 @@
+.divform2{
+    border: solid 2px  hwb(21 0% 0% / 0.854);;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.div1{
+    display: flex;
+    flex-direction: row;
+}
+.div1 > div{
+    margin-right: 30px;  
+}
+.div1 div{
+   display: flex;
+   flex-direction: column; 
+}
+
+.form-control{
+    width: 30vw;
+    height: 07vh;
+}
+.input-group-text{
+    font-size: xx-large;
+}
+.input-group-text3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.button{
+    font-size: x-large;
+    border: solid 2px rgb(94, 92, 92);
+    background-color: hwb(21 0% 0% / 0.854);
+    border-radius: 10px;
+}
+.button1{
+    font-size: x-large;
+    border: solid 2px rgb(94, 92, 92);
+    background-color: hwb(21 0% 0% / 0.854);
+    border-radius: 10px;
+}
+div.hide{
+    display: none;
+
+   
+}
+.hiden3{
+    display: flex;
+    flex-direction: column;
+}
+.radios{
+    display: flex !important;
+    flex-direction: row !important;
+}
+.button5{
+    font-size: x-large;
+    
+    background-color: hwb(21 0% 0% / 0.854);
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+.button6{
+    margin-right: 35px;
+    font-size: x-large;
+    background-color: hwb(21 0% 0% / 0.854);
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+.envoyer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 66vw;
+    margin-top: 30px;
+    
+}

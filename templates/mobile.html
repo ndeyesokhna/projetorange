@@ -1,0 +1,85 @@
+{% extends 'layouts/partials/default.html' %} 
+{% block title %}mobile {%endblock%}
+    {% block body %}
+
+
+
+
+    <form action="">
+        <div class="divform2">
+             <div class="div1"> 
+                 <div class="hiden3">
+                 <div class="input-group input-group-sm mb-3">
+                 <span class="input-group-text" id="inputGroup-sizing-sm">numero client</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" onkeydown="isKeyPressed(event)"/>
+                 </div>
+                 
+                 <div class="input-group input-group-sm mb-3 hide" >
+                     <div class="radios">
+                         <input type="radio" name="choice-fac-bord" id="facture" value-content="facture"/>
+                         <label for="facture">facture</label>
+                     </div>
+                     <div class="radios">
+                         <input type="radio" name="choice-fac-bord" id="bordereau" value-content="bordereau"/>
+                         <label for="bordereau">bordereau</label>
+                     </div>
+                 </div>
+             </div>
+     
+     
+               
+                 <div class="input-group mb-3">
+                 <span class="input-group-text3">   
+                 <span class="input-group-text" id="inputGroup-sizing-default">numero mobile</span>
+                 <span class="button" id="inputGroup-sizing-default">choisir un fichier</span>
+                 <span class="button1" id="inputGroup-sizing-default" hidden> retour</span>
+     
+             </span> 
+                 <input type="text" id="inputnum-fix" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+     
+                 </div>
+             </div>
+             <div class="div1">
+                 <div class="input-group input-group-lg">
+                 <span class="input-group-text" id="inputGroup-sizing-lg">debut</span>
+                 <input type="text" class="form-control" placeholder="mois-année" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                 </div>  
+         
+                 <div class="input-group input-group-lg">
+                 <span class="input-group-text" id="inputGroup-sizing-lg">fin</span>
+                 <input type="text" class="form-control" placeholder="mois-année" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                 </div> 
+             </div>
+             <div>
+             <div class="envoyer">
+                 <a href="/" class="button5" > Retour</a>
+                 <button class="button6" type="submit">Envoyer</button>
+             </div>    
+     
+                 
+             </div>
+     
+     
+             </div>  
+     </form>
+          
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
