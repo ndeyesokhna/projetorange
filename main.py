@@ -11,20 +11,34 @@ def home():
     return render_template('home.html' ) 
 
 
-@app.route('/mobile') 
-def mobile():
-    return render_template('mobile.html')   
+
+@app.route('/mobile/<numfacture>') 
+def numDmob(numfacture):
+    return render_template('mobile.html' ,numfacture=numfacture) 
+
+
+
+@app.route('/fixe/<numfacture>') 
+def numclientfix(numfacture):
+    return render_template('fixe.html' ,numfacture=numfacture) 
+
+
+
+# @app.route('/fixe/numd') 
+# def numDfix():
+#     return render_template('numDfix.html')     
+
+# @app.route('/mobile/numcli') 
+# def numclientmob():
+#     return render_template('numclientmob.html')
 
 
 
 
-@app.route('/fix') 
-def fix():
-    return render_template('fix.html') 
 
-@app.route('/fixmobile') 
-def fixmobile():
-    return render_template('fixmobile.html')    
+# @app.route('/fixmobile') 
+# def fixmobile():
+#     return render_template('fixmobile.html')    
 
 
 

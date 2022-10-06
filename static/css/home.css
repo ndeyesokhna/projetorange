@@ -28,9 +28,9 @@ h1{
     height: 50vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: xx-large;
+    background-color: rgb(233, 233, 248);
+    padding: 0 15%;
 }
 .form-check{
     min-width: 20vw ;
@@ -55,3 +55,9 @@ h1{
     margin-right: 10px;
     
 }
+.suivant{
+    display: flex;
+    justify-content: end;
+    width: 66vw;    
+}
+
