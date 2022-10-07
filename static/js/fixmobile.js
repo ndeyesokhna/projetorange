@@ -24,11 +24,22 @@ button1 && button1.addEventListener("click",()=>{
 })
 
 function isKeyPressed(event) {
+    console.log(event.target);
     var hide = document.querySelector("div.hide");
+    var hide8 = document.querySelector("div.hide8");
+    var hiden3 = document.querySelector("div.hiden3");
+    const parent = event.target.parentElement.parentElement
+    const divFF = parent.querySelector('.FF')
     if (event.metaKey) {
-        hide.style.display="none"
+        hiden3.style.display="none"
+        // hide8.style.display="flex"
+        divFF.style.display="flex"
+        console.log(hfvh)
     } else {
-        hide.style.display="flex"
+        hiden3.style.display="flex"
+        // hide8.style.display="none"
+        divFF.style.display="flex"
+
     }
   }
 

@@ -11,7 +11,7 @@
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" onkeydown="isKeyPressed(event)"/>
                 </div>
             
-                <div class="input-group input-group-sm mb-3 hide" >
+                <div class="input-group input-group-sm mb-3 hide FF" >
                     <div class="radios">
                         <input type="radio" name="choice-fac-bord" id="facture" value-content="facture"/>
                         <label for="facture">facture</label>
@@ -20,28 +20,33 @@
                         <input type="radio" name="choice-fac-bord" id="bordereau" value-content="bordereau"/>
                         <label for="bordereau">bordereau</label>
                     </div>
+                </div>
             </div>
-        </div>
-
+        <div class="hidnumd"> 
                 <div class="input-group mb-3 hide1" >
                     <span class="input-group-text3">   
-                        <span class="input-group-text" id="inputGroup-sizing-default">numero fix</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default">numero fixe</span>
                         <span class="button" id="inputGroup-sizing-default">choisir un fichier</span>
                         <span class="button1" id="inputGroup-sizing-default" hidden> retour</span>
                     </span> 
                     <input type="text" id="inputnum-fix" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default "onkeydown="isKeyPressed(event)"/>
                 </div>
-                    <div class="input-group input-group-sm mb-3 hide" >
-                        <div class="radios">
-                            <input type="radio" name="choice-fac-bord" id="facture" value-content="facture"/>
-                            <label for="facture">facture</label>
-                        </div>
-                        <div class="radios">
-                            <input type="radio" name="choice-fac-bord" id="bordereau" value-content="bordereau"/>
-                            <label for="bordereau">bordereau</label>
-                        </div>
+
+                <div class="input-group input-group-sm mb-3 hide FF" >
+                    <div class="radios">
+                        <input type="radio" name="choice-fac-bord" id="facture" value-content="facture"/>
+                        <label for="facture">facture</label>
                     </div>
+
+                </div>
+
+
+
+
         </div>
+
+    </div> 
+
         <div class="div1">
             <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Mois</span>
@@ -65,33 +70,16 @@
             <a href="/" class="button5" > Retour</a>
             <button class="button6" type="submit">Envoyer</button>
         </div>    
-
+    </form>
             
         
 
 
-        </div>  
-</form>
+         
+
+
+
+
+
+  {% endblock %}
      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {% endblock %}
