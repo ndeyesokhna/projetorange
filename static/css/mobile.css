@@ -1,14 +1,12 @@
 .divform2{
     border: solid 2px  hwb(21 0% 0% / 0.854);;
-    /* height: 50vh; */
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
-    /* align-items: center; */
     flex-wrap: wrap;
-    padding: 140px 20%;
+    padding: 120px 20%;
 }
 
+/* ************************** */
 .div1{
     display: flex;
     flex-direction: row;
@@ -20,12 +18,18 @@
    margin-bottom: 20px;
 }
 
+
+/* ***************************** */
+
 .form-control{
-    padding: 15px;
-    font-size: 20px;
-    outline: 0;
-    letter-spacing: 1px;
     width: 20vw;
+    padding: 15px 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    /* border: 1px solid #ccc; */
+    outline: 0;
+
 }
 .input-group-text{
     font-size: 30px;
@@ -35,42 +39,34 @@
 }
 
 
-.button{
-    font-size: x-large;
-    /* border: solid 2px rgb(94, 92, 92); */
-    background-color: hwb(21 0% 0% / 0.854);
-    border-radius: 10px;
-}
-.button1{
-    font-size: x-large;
-    border: solid 2px rgb(94, 92, 92);
-    background-color: hwb(21 0% 0% / 0.854);
-    border-radius: 10px;
-}
-div.hide{
-    display: none;
-}
+/* ************************ */
+div.hide,
 div.hide8{
     display: none;
 }
-
 .hiden3{
     display: flex;
     flex-direction: column;
 }
+
+
+/* ******* INPUT TYPE RADIO ****** */
 .radios{
     display: flex !important;
     flex-direction: row !important;
+    width: 100%;
 }
-.button5{
-    font-size: x-large;
-    background-color: hwb(21 0% 0% / 0.854);
-    padding-top: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 15px;
-    border-radius: 20px;
+
+.radios label{
+    margin-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font: 20px;
+    font-weight: bold;
 }
+
+
+/* ******* FIN INPUT TYPE RADIO ****** */
 
 .envoyer{
     display: flex;
@@ -80,3 +76,67 @@ div.hide8{
     margin-top: 30px;
     
 }
+
+/* ************** BUTTON STYLE ************** */
+span.input-group-text3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom: 10px;
+}
+span.input-group-text3 .input-group-text{
+    margin-bottom: 0;
+}
+
+/* Choisir */
+.button, .button1{
+    font-size: 15px;
+    background-color: rgb(235, 233, 233);
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* Retour home */
+.button5, .button6{
+    background: hwb(21 0% 0% / 0.854);
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.button6{
+    background: #FFF;
+    color: hwb(21 0% 0% / 0.854); 
+    border: 2px solid hwb(21 0% 0% / 0.854);   
+}
+
+.button6:hover{
+    background: hwb(21 0% 0% / 0.854);
+    color: #000;
+}
+/* ************** FIN BUTTON STYLE ************** */
+
+
+
+/* ********** DIV PERIODE **************** */
+.div-periode div:first-child{
+    margin-right: 10px;
+}
+
+.div-periode select{
+    padding: 8px 10px;
+    border-radius: 4px;
+    /* background: #FFF; */
+    outline: 0;
+    border: none;
+}
+/* ************ FIN DIV PERIODE ********** */

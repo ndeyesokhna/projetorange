@@ -18,7 +18,8 @@
 }
 
 .imgorange{
-    width: 14%;
+    width: 300px;
+    height: 150px;
 }
 
 .divh1{
@@ -41,7 +42,7 @@ h1{
 
 .form1{
     border:  hwb(21 0% 0% / 0.854) solid 2px;
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     padding: 0 15%;
@@ -74,15 +75,7 @@ h1{
     margin-top: 20px;
 }
 
-.button6{
-    background: hwb(21 0% 0% / 0.854);
-    padding: 15px 20px;
-    border-radius: 4px;
-    font-size: 25px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: #000;
-}
+
 
 
 
@@ -92,14 +85,12 @@ h1{
     border: solid 2px hwb(21 0% 0% / 0.854);
     padding: 20px 40px;
     text-align: end;
- 
+    background: red;
 } */
 footer{
     width: 100%;
     text-align: end;
     border: solid 2px hwb(21 0% 0% / 0.854);
-
-
 }
 
 .imgfooter{

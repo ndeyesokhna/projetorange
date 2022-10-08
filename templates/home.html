@@ -1,43 +1,41 @@
-
-
-{% extends 'layouts/partials/default.html' %} 
+{% extends 'layouts/partials/default.html' %}
 {% block title %}home {%endblock%}
-    {% block body %}  
+{% block body %}
 
-    <form action="" class="form1">
-        <div>
-          <h4>1.choice</h4>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input1" type="radio" name="flexRadioDefault" content="fixe" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-              FIXE
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input2" type="radio" name="flexRadioDefault" content="mobile" id="flexRadioDefault2" >
-            <label class="form-check-label" for="flexRadioDefault2">
-              MOBILE
-            </label>
-          </div>
-          <div>
-            <h4>2.choice</h4>
-          </div>
-          <div class="form-check">
-            <input content="numcli" class="form-check-input1" type="radio" name="typeNumFac" id="numcli">
-            <label class="form-check-label" for="numcli">
-              Numero Client
-            </label>
-          </div>
-          <div class="form-check">
-            <input content="numd" class="form-check-input2" type="radio" name="typeNumFac" id="numd" >
-            <label class="form-check-label" for="numd">
-              Numero D
-            </label>
-          </div> 
-         <div class="suivant" >
-          <a href="#" class="button6">suivant</a>
-         </div>  
-    </form>
+<form action="" class="form1">
+  <div>
+    <h4>1.choice</h4>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input1" type="radio" name="flexRadioDefault" content="fixe" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      FIXE
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input2" type="radio" name="flexRadioDefault" content="mobile" id="flexRadioDefault2">
+    <label class="form-check-label" for="flexRadioDefault2">
+      MOBILE
+    </label>
+  </div>
+  <div>
+    <h4>2.choice</h4>
+  </div>
+  <div class="form-check">
+    <input content="numcli" class="form-check-input1" type="radio" name="typeNumFac" id="numcli">
+    <label class="form-check-label" for="numcli">
+      Numero Client
+    </label>
+  </div>
+  <div class="form-check">
+    <input content="numd" class="form-check-input2" type="radio" name="typeNumFac" id="numd">
+    <label class="form-check-label" for="numd">
+      Numero D
+    </label>
+  </div>
+  <div class="suivant">
+    <a href="#" class="button6">suivant</a>
+  </div>
+</form>
 
 {% endblock %}
