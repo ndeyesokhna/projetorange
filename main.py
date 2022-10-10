@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask,redirect, render_template, template_rendered,request
 
 app = Flask(__name__)
@@ -28,9 +29,16 @@ def numclientfix(numfacture):
 
 
 
-# @app.route('/fixe/numd') 
-# def numDfix():
-#     return render_template('numDfix.html')     
+# @app.route('/login',methods=['get','post']) 
+# def login():
+#         print(request.form)
+        # nameclient = request.form['nameclient']
+
+        # namebordereau = request.form['namebordereau']
+        # namemobile = request.form['namemobile']
+        # namefacture = request.form['namefacture']
+        # print('namefacture:',namefacture , 'namemobile:',namemobile ,'namebordereau:',namebordereau,'nameclient:',nameclient)   
+        return 'page de traitement'     
 
 # @app.route('/mobile/numcli') 
 # def numclientmob():
