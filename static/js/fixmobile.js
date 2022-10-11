@@ -62,6 +62,77 @@ if(names1[2] == 'numcli'){
 }
 
 
+function myfunctionmobile(e){
+    e.preventDefault()
+    const form = e.target
+    // console.log(form)
+    let inpute = form["nameinput"];
+    const tab = Object.values(inpute)
+    let x = tab.filter(el => el.value != "")[0];
+    console.log(x.value); 
+
+    let radio = form["nameradio"];
+    const rad = Object.values(radio)
+    radio = rad.filter(elradio=> elradio.checked ==true)[0].getAttribute("value-content");
+    console.log(radio);
+
+    const year = form["year"].value;
+    console.log(year);
+
+
+    const month = form["month"].value;
+    console.log(month);
+
+}
+
+async function myfunctionfixe(e){
+    e.preventDefault()
+    const form = e.target
+    // console.log(form)
+    let inpute = form["nameinput"];
+    const tab = Object.values(inpute)
+    let x = tab.filter(el => el.value != "")[0].value;
+
+    console.log(x); 
+
+    let radio = form["nameradio"];
+    // console.log(radio);
+    const rad2 = Object.values(radio)
+    let radio1 = rad2.filter(elradio2=> elradio2.checked ==true)[0].getAttribute("value-content2");
+    console.log(radio1);
+
+    const year = form["year"].value;
+    console.log(year);
+
+
+    const month = form["month"].value;
+    console.log(month);
+
+    let data = {
+        "univers": x,
+        "type" : radio1,
+        "mois" : month,
+        "year" : year,
+    }
 
 
 
+    const response = await fetch("/apis", {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+        });
+    
+        
+
+
+
+}
+
+
+
+// Factures = f'/fadet/factures/dossier_50877/{univers}/Fact/{annee}/{mois}/'
+ 
+// Bordereau = f'/fadet/factures/dossier_50877/{univers}/Bord/pdf/{annee}/{mois}/'

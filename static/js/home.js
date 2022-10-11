@@ -15,6 +15,7 @@ button6 && button6.addEventListener('click' ,()=>{
     const content2 = result2.getAttribute('content');
 
     let result = content1 + "/" + content2
+    console.log(result);
     button6.setAttribute("href", result )
 
 })

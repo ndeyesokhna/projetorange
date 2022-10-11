@@ -2,7 +2,7 @@
 {% block title %}mobile {%endblock%}
     {% block body %}
 
-<form action="{{ url_for('login') }}" method="POST">
+<form action="{{ url_for('login') }}" method="POST" id="myform" onsubmit="myfunctionmobile(event)">
    <div class="divform2">
         <div class="div1"> 
             <div class="hiden3">
@@ -14,7 +14,7 @@
                 <div class="input-group input-group-sm mb-3 hide FF" >
 
                     <div class="radios">
-                        <input type="radio" name="nameradio" id="bordereau" value-content="bordereau"/>
+                        <input type="radio" name="nameradio" id="bordereau" value-content="Bord"/>
                         <label for="bordereau">bordereau</label>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
 
                 <div class="input-group input-group-sm mb-3 hide FF" >
                     <div class="radios">
-                        <input name="nameradio" type="radio" name="choice-fac-bord" id="facture" value-content="facture"/>
+                        <input name="nameradio" type="radio" name="choice-fac-bord" id="facture" value-content="Fact"/>
                         <label for="facture">facture</label>
                     </div>
 
@@ -63,11 +63,14 @@
                 </select>
             </div>
         </div>
+
+       
         <div class="envoyer">
             <a href="/" class="button5" > Retour</a>
             <button class="button6" type="submit">Envoyer</button>
         </div>    
     </form>
+    <p id="demo"> </p>
             
         
 

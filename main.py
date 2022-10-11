@@ -1,4 +1,6 @@
 from crypt import methods
+import json
+from urllib import response
 from flask import Flask,redirect, render_template, template_rendered,request
 
 app = Flask(__name__)
@@ -29,25 +31,33 @@ def numclientfix(numfacture):
 
 
 
+@app.route('/apis', methods=["POST"]) 
+def apis():
+    b = request.get_data()
+    r = json.loads(b.decode())
+    univers = r["univers"]
+    type = r["type"]
+    mois = r["mois"]
+    year = r["year"]
+    Factures = f'/fadet/factures/dossier_50877/{univers}/{type}/{year}/{mois}/'
+    print(Factures)
+    return request.url
+
+
+# Factures = f'/fadet/factures/dossier_50877/{univers}/Fact/{annee}/{mois}/'
+
+ 
+
+# Bordereau = f'/fadet/factures/dossier_50877/{univers}/Bord/pdf/{annee}/{mois}/'
 # @app.route('/login',methods=['get','post']) 
 # def login():
 #         print(request.form)
-        # nameclient = request.form['nameclient']
+#         return 'page de traitement'     
 
-        # namebordereau = request.form['namebordereau']
-        # namemobile = request.form['namemobile']
-        # namefacture = request.form['namefacture']
-        # print('namefacture:',namefacture , 'namemobile:',namemobile ,'namebordereau:',namebordereau,'nameclient:',nameclient)   
-        return 'page de traitement'     
-
-# @app.route('/mobile/numcli') 
-# def numclientmob():
-#     return render_template('numclientmob.html')
+  
 
 
-# @app.route('/fixmobile') 
-# def fixmobile():
-#     return render_template('fixmobile.html')    
+   
 
 
 
