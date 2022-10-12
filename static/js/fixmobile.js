@@ -25,8 +25,8 @@ button1 && button1.addEventListener("click",()=>{
 
 function isKeyPressed(event) {
     console.log(event.target);
-    var hide = document.querySelector("div.hide");
-    var hide8 = document.querySelector("div.hide8");
+    // var hide = document.querySelector("div.hide");
+    // var hide8 = document.querySelector("div.hide8");
     var hiden3 = document.querySelector("div.hiden3");
     const parent = event.target.parentElement.parentElement
     const divFF = parent.querySelector('.FF')
@@ -62,26 +62,55 @@ if(names1[2] == 'numcli'){
 }
 
 
-function myfunctionmobile(e){
+async function myfunctionmobile(e){
     e.preventDefault()
     const form = e.target
     // console.log(form)
     let inpute = form["nameinput"];
     const tab = Object.values(inpute)
     let x = tab.filter(el => el.value != "")[0];
-    console.log(x.value); 
+    x = x.value; 
+
+
+    let univer = window.location.pathname
+    const univer1 = univer.split("/");
+    const univers = univer1[1][0]
+    const univ = univers.toUpperCase() + univer1[1].substring(1)
+    
+    console.log(univ); 
 
     let radio = form["nameradio"];
     const rad = Object.values(radio)
     radio = rad.filter(elradio=> elradio.checked ==true)[0].getAttribute("value-content");
-    console.log(radio);
+    // console.log(radio);
 
     const year = form["year"].value;
-    console.log(year);
+    // console.log(year);
 
 
     const month = form["month"].value;
-    console.log(month);
+    // console.log(month);
+
+
+
+
+    let data = {
+        "nomfact": x,
+        "univers": univ,
+        "type" : radio,
+        "mois" : month,
+        "year" : year,
+    }
+
+
+
+    const response = await fetch("/apis", {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+        });
 
 }
 
@@ -92,8 +121,18 @@ async function myfunctionfixe(e){
     let inpute = form["nameinput"];
     const tab = Object.values(inpute)
     let x = tab.filter(el => el.value != "")[0].value;
-
     console.log(x); 
+
+
+ 
+    let univer = window.location.pathname
+    const univer1 = univer.split("/");
+    const univers = univer1[1][0]
+    const univ = univers.toUpperCase() + univer1[1].substring(1)
+    
+    console.log(univ); 
+
+
 
     let radio = form["nameradio"];
     // console.log(radio);
@@ -109,7 +148,8 @@ async function myfunctionfixe(e){
     console.log(month);
 
     let data = {
-        "univers": x,
+        "nomfact": x,
+        "univers": univers,
         "type" : radio1,
         "mois" : month,
         "year" : year,

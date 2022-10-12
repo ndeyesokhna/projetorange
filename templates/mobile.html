@@ -2,7 +2,7 @@
 {% block title %}mobile {%endblock%}
     {% block body %}
 
-<form action="{{ url_for('login') }}" method="POST" id="myform" onsubmit="myfunctionmobile(event)">
+<form  method="POST" id="myform" onsubmit="myfunctionmobile(event)">
    <div class="divform2">
         <div class="div1"> 
             <div class="hiden3">
@@ -15,7 +15,7 @@
 
                     <div class="radios">
                         <input type="radio" name="nameradio" id="bordereau" value-content="Bord"/>
-                        <label for="bordereau">bordereau</label>
+                        <label for="bordereau">Bordereau</label>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="input-group input-group-sm mb-3 hide FF" >
                     <div class="radios">
                         <input name="nameradio" type="radio" name="choice-fac-bord" id="facture" value-content="Fact"/>
-                        <label for="facture">facture</label>
+                        <label for="facture">Facture</label>
                     </div>
 
                 </div>
@@ -44,7 +44,7 @@
 
     </div> 
 
-        <div class="div1">
+        <div class="div1 div-periode">
             <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Mois</span>
             <select name="month" id="month">
@@ -83,3 +83,9 @@
 
   {% endblock %}
      
+
+  {% block javascript %}
+    
+  <script src="../static/js/move_footer.js" defer></script>
+
+{% endblock %}

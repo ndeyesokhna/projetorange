@@ -13,12 +13,12 @@
             
                 <div class="input-group input-group-sm mb-3 hide FF" >
                     <div class="radios">
-                        <input name="nameradio" type="radio" name="choice-fac-bord" id="facture" value-content2="facture"/>
-                        <label for="facture">facture</label>
+                        <input name="nameradio" type="radio" name="choice-fac-bord" id="facture" value-content2="Fact"/>
+                        <label for="facture">Fact</label>
                     </div>
                     <div class="radios">
-                        <input name="nameradio" type="radio"  id="bordereau" value-content2="bordereau"/>
-                        <label for="bordereau">bordereau</label>
+                        <input name="nameradio" type="radio"  id="bordereau" value-content2="Bord"/>
+                        <label for="bordereau">Bordereau</label>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,8 @@
 
                 <div class="input-group input-group-sm mb-3 hide FF" >
                     <div class="radios">
-                        <input name="nameradio" type="radio"  id="facture" value-content="facture"/>
-                        <label for="facture">facture</label>
+                        <input name="nameradio" type="radio"  id="facture" value-content="Fact"/>
+                        <label for="facture">Facture</label>
                     </div>
 
                 </div>
@@ -47,7 +47,7 @@
 
     </div> 
 
-        <div class="div1">
+        <div class="div1 div-periode">
             <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Mois</span>
             <select name="month" id="month">
@@ -82,4 +82,11 @@
 
 
   {% endblock %}
+
+  {% block javascript %}
+    
+    <script src="../static/js/move_footer.js" defer></script>
+
+{% endblock %}
+
      
