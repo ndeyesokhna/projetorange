@@ -70,14 +70,19 @@ async function myfunctionmobile(e){
     const tab = Object.values(inpute)
     let x = tab.filter(el => el.value != "")[0];
     x = x.value; 
+    // console.log(x);
 
+
+    let nomclient = form["nomclient"]
+    nomclient = nomclient.value
+    // console.log(nomclient);
 
     let univer = window.location.pathname
     const univer1 = univer.split("/");
     const univers = univer1[1][0]
     const univ = univers.toUpperCase() + univer1[1].substring(1)
     
-    console.log(univ); 
+    // console.log(univ); 
 
     let radio = form["nameradio"];
     const rad = Object.values(radio)
@@ -100,6 +105,7 @@ async function myfunctionmobile(e){
         "type" : radio,
         "mois" : month,
         "year" : year,
+        "nomduclient":nomclient
     }
 
 
@@ -121,16 +127,17 @@ async function myfunctionfixe(e){
     let inpute = form["nameinput"];
     const tab = Object.values(inpute)
     let x = tab.filter(el => el.value != "")[0].value;
-    console.log(x); 
+    // console.log(x); 
 
-
+    let nomclient = form["nomclient"]
+    nomclient = nomclient.value
+    // console.log(nomclient);
  
     let univer = window.location.pathname
     const univer1 = univer.split("/");
     const univers = univer1[1][0]
     const univ = univers.toUpperCase() + univer1[1].substring(1)
-    
-    console.log(univ); 
+    // console.log(univ); 
 
 
 
@@ -138,14 +145,14 @@ async function myfunctionfixe(e){
     // console.log(radio);
     const rad2 = Object.values(radio)
     let radio1 = rad2.filter(elradio2=> elradio2.checked ==true)[0].getAttribute("value-content2");
-    console.log(radio1);
+    // console.log(radio1);
 
     const year = form["year"].value;
     console.log(year);
 
 
     const month = form["month"].value;
-    console.log(month);
+    // console.log(month);
 
     let data = {
         "nomfact": x,
@@ -153,6 +160,8 @@ async function myfunctionfixe(e){
         "type" : radio1,
         "mois" : month,
         "year" : year,
+        "nomduclient":nomclient
+
     }
 
 
@@ -171,8 +180,3 @@ async function myfunctionfixe(e){
 
 }
 
-
-
-// Factures = f'/fadet/factures/dossier_50877/{univers}/Fact/{annee}/{mois}/'
- 
-// Bordereau = f'/fadet/factures/dossier_50877/{univers}/Bord/pdf/{annee}/{mois}/'

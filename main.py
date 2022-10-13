@@ -6,6 +6,8 @@ import ftplib
 from flask import Flask,redirect, render_template,request
 import pysftp 
 import paramiko
+import os
+import zipfile
 
 
 app = Flask(__name__)
@@ -53,12 +55,13 @@ def apis():
     r = json.loads(b.decode())
     nomfact= r["nomfact"]
     univers = r["univers"]
-    print(univers)
+    # print(univers)
     type = r["type"]
     mois = r["mois"]
     year = r["year"]
     numfacture = recupnum(nomfact)
-    # print(numfacture)
+    nomclient=r["nomduclient"]
+    # print(nomclient)
     if type == "Fact":
         endpoint = f'/ftpuser/fadet/factures/dossier_50877/{univers}/Fact/{year}/{mois}/{numfacture}'
     else:
@@ -69,10 +72,16 @@ def apis():
     print("Connection succesfully stablished ...  ")
 
     ####################### telecharger un fichier ###############
-    remoteFilePath2 = f"/home/tourediaby/Images/{numfacture}"
-    localFilePath2 = "/ftpuser/fadet/factures/dossier_50877/Mobile/Fact/2022/08/770992040P2208097195.pdf"
-    print(endpoint)
-    svt.get(localFilePath2, remoteFilePath2) 
+    if not os.path.exists(f"{nomclient}"):
+        print(f"{nomclient}")
+        os.makedirs(f"{nomclient}")
+    remote = f"./{nomclient}/{numfacture}"
+    re =f"./{nomclient}"
+    # print(re)
+    svt.get(endpoint, remote)
+    zip_directory('./sokhn', './sokhn.zip')     
+
+
     return request.url
 
 ############## recup numfacture ####################""
@@ -84,7 +93,15 @@ def recupnum(nomfact):
             if nomfact==splite:
                 return  ligne[0]
 
-
+################### zip le folder ###################
+def zip_directory(folder_path, zip_path):
+    with zipfile.ZipFile(zip_path, mode='w') as zipf:
+        len_dir_path = len(folder_path)
+        for root, _, files in os.walk(folder_path):
+            for file in files:
+                file_path = os.path.join(root, file)
+                zipf.write(file_path, file_path[len_dir_path:])
+                
      
 
   

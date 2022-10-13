@@ -140,3 +140,9 @@ span.input-group-text3 .input-group-text{
     border: none;
 }
 /* ************ FIN DIV PERIODE ********** */
+
+.nomduclient{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+}
