@@ -117,6 +117,14 @@ async function myfunctionmobile(e){
         },
         body: JSON.stringify(data)
         });
+        jsonn = await response.json();
+        console.log(jsonn);
+        localStorage.setItem('nomdufichier', JSON.stringify(jsonn));
+        // localStorage.setItem('nomdufichier' ,jsonn)
+        // console.log(nomdufichier)
+        
+     
+window.location.pathname = "/envoyer"     
 
 }
 

@@ -1,0 +1,135 @@
+{% extends 'layouts/partials/default.html' %} 
+{% block title %}envoyer{%endblock%}
+{% block body %}
+
+
+<div class="envoi">
+   
+    <div>
+        <p>Univers: </p>
+    </div>
+
+    <div>
+        <p>Mois: </p>
+    </div>
+
+    <div>
+        <p>Années: </p>
+    </div>
+    <div>
+        <p>Nom Du Client:</p>
+    </div>
+</div>
+
+<div class="envoyer2">
+    <a  class="button7" id="dowlo" href="{{ url_for('downloads', type=type) }}">Télécharger<a>
+    <a class="button7" id="myBtn" type="submit">Envoi Mail</a>
+    <a class="button7" id="myBtn1" type="submit" >Depot OneDrive</a>
+</div> 
+
+<form action="/maile" method="POST">
+<div id="myModal" class="modal">
+<div class="modal-content">  
+    <div class="modal-header">
+        <span class="close">&times;</span>
+    </div>   
+    <div class="modal-body">
+        <label for="email" >Email address</label>
+        <input class="form-control" type="email" name="email" placeholder="name@example.com" required>
+    </div>
+    <div class="modal-footer">
+        <button   type="submit" class="btn btn-primary">Envoyer</button>
+    </div>
+</div>
+</div>
+</form>
+
+<form method="POST" id="myform1" onsubmit="myfunctiondrive(event)"> 
+<div id="myModal1" class="modal1">
+
+    <!-- Modal content -->
+    <div class="modal-content1">
+      <div class="modal-header1">
+        <span class="close1">&times;</span>
+      </div>
+      <div class="modal-body1">
+        <div class="inpute">
+            <label for="email" >Email address</label>
+            <input class="form-control" type="email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="inpute">
+            <label for="password" >Password</label>
+            <input class="form-control" type="password" name="password" placeholder="password" required>
+        </div>
+        <div class="inpute">
+            <label for="url" >Url</label>
+            <input class="form-control" type="url" name="url" placeholder="url" required>
+        </div> 
+      </div>
+      <div class="modal-footer1">
+            <button  type="submit" class="btn btn-primary">Envoyer</button>
+      </div>
+    </div>
+  
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+     
+
+{% block javascript %}
+      
+ <script src="../static/js/move_footer.js" defer></script>
+  
+{% endblock %}

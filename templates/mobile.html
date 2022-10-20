@@ -26,7 +26,7 @@
                         <span class="button" id="inputGroup-sizing-default">choisir un fichier</span>
                         <span class="button1" id="inputGroup-sizing-default" hidden> retour</span>
                     </span> 
-                    <input name="nameinput" type="text" id="inputnum-fix" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default "onkeydown="isKeyPressed(event)"/>
+                    <input name="nameinput" value="770992040"  type="text" id="inputnum-fix" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default "onkeydown="isKeyPressed(event)"/>
                 </div>
 
                 <div class="input-group input-group-sm mb-3 hide FF" >
@@ -47,7 +47,8 @@
         <div class="div1 div-periode">
             <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Mois</span>
-            <select name="month" id="month">
+            <select name="month" id="month" value="08">
+                <option value="08" >08</option>
                 {% for month in tab_months %}
                     <option value={{month}} >{{month}}</option>
                 {% endfor %}
@@ -56,7 +57,8 @@
             </div>  
             <div class="input-group input-group-lg">
                 <span class="input-group-text" id="inputGroup-sizing-lg">Année</span>
-                <select name="year" id="year">
+                <select name="year" id="year" value="2022">
+                    <option value="2022" >2022</option>
                     {% for year in tab_years %}
                         <option value={{year}} >{{year}}</option>
                     {% endfor %}
@@ -74,7 +76,7 @@
             <button class="button6" type="submit">Envoyer</button>
         </div>    
     </form>
-    <p id="demo"> </p>
+
             
         
 

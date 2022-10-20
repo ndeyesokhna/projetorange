@@ -100,7 +100,7 @@ span.input-group-text3 .input-group-text{
 
 
 /* Retour home */
-.button5, .button6{
+.button5, .button6 , .button7{
     background: hwb(21 0% 0% / 0.854);
     padding: 15px 25px;
     border-radius: 4px;
@@ -113,11 +113,11 @@ span.input-group-text3 .input-group-text{
     transition: all ease .3s;
 }
 
-.button6{
+/* .button6{
     background: #FFF;
     color: hwb(21 0% 0% / 0.854); 
-    border: 2px solid hwb(21 0% 0% / 0.854);   
-}
+    border: 2px solid hwb(21 0% 0% / 0.854);    
+} */
 
 .button6:hover{
     background: hwb(21 0% 0% / 0.854);
@@ -146,3 +146,18 @@ span.input-group-text3 .input-group-text{
     display: flex;
     flex-direction: column;
 }
+.envoi{
+    display: flex;
+    flex-direction: column;
+    padding: 0 19%;
+}
+.envoi div{
+    margin-top: 30px;
+}
+.envoyer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}    

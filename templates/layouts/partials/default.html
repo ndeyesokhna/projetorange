@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/home.css">
     <link rel="stylesheet" href="../static/css/mobile.css">
-    <script src="../static/js/home.js" defer></script>
+    <link rel="stylesheet" href="../static/css/envoyer.css">
     <script src="../static/js/fixmobile.js" defer></script>
+    <script src="../static/js/envoyer.js" defer></script>
 
     <title>{% block title %} {%endblock%}</title>
 </head>
@@ -18,13 +19,13 @@
 
 
 
-{% block body%}
-{% endblock %}
+{% block body%} {% endblock %}
 
 
 
 
 {% include 'layouts/partials/footer.html'%}
+
 
 {% block javascript %}{% endblock %}
 
